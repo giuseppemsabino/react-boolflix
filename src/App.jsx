@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-
+import { MovieContextProvider } from "./context/MovieContext"
 //layout
 
 //contexts
@@ -11,11 +11,13 @@ function App() {
   
 
   return (
+  <MovieContextProvider>
    <BrowserRouter>
    <Routes>
     
    </Routes>
    </BrowserRouter>
+   </MovieContextProvider>
   )
 }
 
