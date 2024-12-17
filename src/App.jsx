@@ -1,4 +1,3 @@
-import { useMovieContext } from "./context/MovieContext";
 import Header from "./components/Header";
 import Main from "./components/Main";
 
