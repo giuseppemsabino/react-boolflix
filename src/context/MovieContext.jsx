@@ -1,14 +1,14 @@
-// import { createContext, useContext} from "react";
+import { createContext, useContext} from "react";
 
-// const MovieContext = createContext();
+const MovieContext = createContext();
 
-// const MovieContextProvider = () => {
-//   const globalData ={
-//     apiUrl : import.meta.env.VITE_BASE_URL,
-//     movies: [],
-//     series: []
-//   }
-//   return <MovieContext.Provider value={globalData}></MovieContext.Provider>
-// }
+export const MovieContextProvider = ({children}) => {
+  const globalData ={
+    apiUrl : import.meta.env.VITE_BASE_URL,
+    movies: [],
+    series: []
+  }
+  return <MovieContext.Provider value={globalData}>{children}</MovieContext.Provider>
+}
 
-// export const useMovieContext = ()=> useContext(MovieContext)
+export const useMovieContext = ()=> useContext(MovieContext)
